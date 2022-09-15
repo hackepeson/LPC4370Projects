@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>1917159288</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\supportFiles\brd_link4370\inc\board.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\lpc_types.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\romapi_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\dac_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\timer_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\uart_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\lcd_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\gpiogroup_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\aes_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\ritimer_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\adc.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\chip_18xx_43xx.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\LowLevelIOInterface.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\emc_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sct_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\iar_startup_lpc18xx43xx.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\board\board.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\sysinit_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\clock_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\chip.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\pmc_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\sysinit.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sdmmc_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\i2c_common_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\core_cm4.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sdio_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\gpio_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\spi_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\uart_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\gpio.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\i2cm_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\iap_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\uart.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yfuns.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sdmmc.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\ssp_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\gpdma_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\creg_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\sysinit_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\mcpwm_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\evrt_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\fmc_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\cmsis.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\clock_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\Debug\Exe\PATest.out</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\startup\sysinit.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\clock_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\fpu_init.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\startup\iar_startup_lpc18xx43xx.s</file>
+            <file>$PROJ_DIR$\adc.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\chip_lpc43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\fpu_init.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\hsadc_18xx_43xx.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\gpio_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\uart.c</file>
+            <file>$PROJ_DIR$\gpio.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\adc_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\hsadc_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\timer.h</file>
+            <file>$PROJ_DIR$\timer.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\config_43xx\sys_config.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\pinint_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\i2s_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\gpdma_18xx_43xx.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\adc.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\timer_18xx_43xx.c</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\enet_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\rtc_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\lpc18xx_43xx_ldscript_spifi.icf</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\gpdma_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\hsadc_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\wwdt_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\atimer_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\qei_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sdif_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\timer_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\timer.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\eeprom_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\usbhs_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sct_pwm_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\otp_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\cmsis_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\error.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\core_cm4_simd.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\sgpio_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\board\board_sysinit.o</file>
+            <file>$PROJ_DIR$\Debug\List\PATest.map</file>
+            <file>$PROJ_DIR$\supportFiles\brd_link4370\inc\board_api.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\gima_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\spifi_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\ring_buffer.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\i2c_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\rgu_18xx_43xx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\scu_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\uart.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\uart_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\gpio_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\chip\fpu_init.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\ccan_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\chip_clocks.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\supportFiles\iar_startup_lpc18xx43xx.o</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\inc\cguccu_18xx_43xx.h</file>
+            <file>$PROJ_DIR$\supportFiles\brd_link4370\src\board.c</file>
+            <file>$PROJ_DIR$\supportFiles\brd_link4370\src\board_sysinit.c</file>
+            <file>$PROJ_DIR$\supportFiles\brd_link4370\src\retarget.h</file>
+            <file>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\chip_18xx_43xx.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\uart_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 5</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\gpdma_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 77</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\sysinit_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\clock_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\PATest.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 105</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 84 13 26 104 18 29 119 77 112 37 64 122 9 32 28 94 4 116 5 89 21 14 24</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\startup\sysinit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 106 78 114</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\fpu_init.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\startup\iar_startup_lpc18xx43xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 122</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 25</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\gpio_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 116</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 0 30 74 53 1 70 12 101 15 19 16 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 106 78 114 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 86 12 101 15 19 16 114 62 30 74 53 1 70 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 0 106 78 60 72 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\hsadc_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 106 78 114 72</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78 12 101 15 19 16 114 30 74 53 1 70 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 60 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\timer_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\brd_link4370\src\board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 106 78 114 86 62 126 44 20</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\brd_link4370\src\board_sysinit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63 106 78 114</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\supportFiles\chip_43xx_18xx\src\chip_18xx_43xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 74 53 1 70 12 101 15 19 16 17 99 35 108 83 11 27 102 61 115 57 123 121 113 48 51 98 92 69 87 90 8 120 3 95 22 81 52 111 34 76 107 85 118 75 7 6 50 31 91 10 82 23 97 33 45 36 103 109 38 46 93 117 110 96 88 2 42 100 41 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 55 105</file>
+                </tool>
+            </outputs>
+        </file>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

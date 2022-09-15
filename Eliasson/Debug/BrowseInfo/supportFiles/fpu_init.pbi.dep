@@ -1,0 +1,19 @@
+C:\Eliasson\Debug\BrowseInfo\supportFiles\fpu_init.pbi: \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\src\fpu_init.c \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\config_43xx\sys_config.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\cmsis.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\lpc_types.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\stdbool.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\cmsis_43xx.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\core_cm4.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.20.4\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\core_cmFunc.h \
+  C:\Eliasson\supportFiles\chip_43xx_18xx\inc\core_cm4_simd.h

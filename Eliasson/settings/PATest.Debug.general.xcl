@@ -1,0 +1,15 @@
+"C:\Program Files\IAR Systems\Embedded Workbench 9.20.4\arm\bin\armPROC.dll" 
+
+"C:\Program Files\IAR Systems\Embedded Workbench 9.20.4\arm\bin\armJLINK.dll" 
+
+"C:\Eliasson\Debug\Exe\PATest.out" 
+
+--plugin="C:\Program Files\IAR Systems\Embedded Workbench 9.20.4\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files\IAR Systems\Embedded Workbench 9.20.4\arm\config\debugger\NXP\LPC18xx_LPC43xx.dmac" 
+
+--flash_loader="C:\Program Files\IAR Systems\Embedded Workbench 9.20.4\arm\config\flashloader\NXP\FlashNXPLPC18xx_Flashless.board" 
+
+
+
+
