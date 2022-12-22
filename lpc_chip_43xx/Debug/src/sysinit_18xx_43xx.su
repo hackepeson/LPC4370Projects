@@ -1,0 +1,7 @@
+C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/clock_18xx_43xx.h:137:22:Chip_Clock_DisableMainPLL	4	static
+C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/clock_18xx_43xx.h:159:22:Chip_Clock_SetupMainPLL	16	static
+C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/clock_18xx_43xx.h:380:21:Chip_Clock_MainPLLLocked	4	static
+../src/sysinit_18xx_43xx.c:81:6:Chip_SetupCoreClock	72	static
+../src/sysinit_18xx_43xx.c:144:6:Chip_SetupXtalClocking	8	static
+../src/sysinit_18xx_43xx.c:150:6:Chip_SetupIrcClocking	8	static
+../src/sysinit_18xx_43xx.c:156:6:Chip_SystemInit	8	static
