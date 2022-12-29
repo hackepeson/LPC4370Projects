@@ -6,6 +6,42 @@
 #include "timer.h"
 #include "gpio.h"
 
+
+
+////////////////////// SPI STUFF /////////////////////////////
+#define LPC_SSP   (LPC_SSP1)
+#define BUFFER_SIZE                         (10)
+#define SSP_DATA_BITS                       (SSP_BITS_16)
+#define SSP_DATA_BIT_NUM(databits)          (databits+1)
+#define SSP_DATA_BYTES(databits)            (((databits) > SSP_BITS_16) ? 2:1)
+#define SSP_LO_BYTE_MSK(databits)           ((SSP_DATA_BYTES(databits) > 1) ? 0xFF:(0xFF>>(8-SSP_DATA_BIT_NUM(databits))))
+#define SSP_HI_BYTE_MSK(databits)           ((SSP_DATA_BYTES(databits) > 1) ? (0xFF>>(16-SSP_DATA_BIT_NUM(databits))):0)
+
+#define SSP_MODE_SEL                        (0x31)
+#define SSP_TRANSFER_MODE_SEL               (0x32)
+#define SSP_MASTER_MODE_SEL                 (0x31)
+#define SSP_SLAVE_MODE_SEL                  (0x32)
+#define SSP_POLLING_SEL                     (0x31)
+#define SSP_INTERRUPT_SEL                   (0x32)
+#define SSP_DMA_SEL                         (0x33)
+
+static SSP_ConfigFormat ssp_format;
+static Chip_SSP_DATA_SETUP_T xf_setup;
+static uint16_t Tx_Buf[BUFFER_SIZE];
+static uint16_t Rx_Buf[BUFFER_SIZE];
+
+static void Buffer_Init(void)
+{
+	uint16_t i;
+	uint8_t ch = 0;
+
+	for (i = 0; i < BUFFER_SIZE; i++) {
+		Tx_Buf[i] = ch++;
+		Rx_Buf[i] = 0x0000;
+	}
+}
+
+////////////////////// UART STUFF /////////////////////////////
 #define LPC_UARTX (LPC_USART2)
 
 int main() {
@@ -24,6 +60,38 @@ int main() {
 	initADC();
 	startADC();
 	gpioInit();
+
+	Board_SSP_Init(LPC_SSP);
+	Chip_SSP_Init(LPC_SSP);
+
+	////////////// SPI
+	ssp_format.frameFormat = SSP_FRAMEFORMAT_SPI;
+	ssp_format.bits = SSP_DATA_BITS;
+	ssp_format.clockMode = SSP_CLOCK_MODE0;
+	Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
+	Chip_SSP_Enable(LPC_SSP);
+	Chip_SSP_SetMaster(LPC_SSP, 0); // Slave
+
+	xf_setup.length = BUFFER_SIZE*2;
+	xf_setup.tx_data = Tx_Buf;
+	xf_setup.rx_data = Rx_Buf;
+
+
+	while (1)
+	{
+		Buffer_Init();
+		xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+
+		Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+		for (int i = 0; i < BUFFER_SIZE; i++)
+		{
+			printf("%d\n", (uint16_t)Rx_Buf[i]);
+		}
+		//Chip_SSP_WriteFrames_Blocking(LPC_SSP, Tx_Buf, 2);
+		//uint32_t Chip_SSP_WriteFrames_Blocking(LPC_SSP_T *pSSP, const uint8_t *buffer, uint32_t buffer_len)
+	}
+
+	///////////// End SPI
 
 	uint16_t sampleVector[DMA_TRANSFER_SIZE];
 	uint32_t sampleVectorSUM[DMA_TRANSFER_SIZE];
@@ -52,10 +120,12 @@ int main() {
 			if (1) {
 				noOfData = performADCAndFetchOneVector(sampleVector);
 			}
+			/*
 			while (gpioReadP11())
 				while (0) {
 					__NOP();
 				}
+			*/
 			/*
 			 for (int i = 0; i < noOfData; i++)
 			 {
@@ -97,10 +167,11 @@ int main() {
 		 }
 		 */
 
-		for (int i = 0; i < MinNoOfSampleData; i++) {
-			printf("%d\n", sampleVectorSUM[i]);
+		/*for (int i = 0; i < MinNoOfSampleData; i++) {
+			printf("%lu\n", sampleVectorSUM[i]);
 		}
 		printf("Min no of sample point = %d\n", MinNoOfSampleData);
+		*/
 
 	}
 	return 0;
