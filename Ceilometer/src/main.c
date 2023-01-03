@@ -10,13 +10,14 @@
 
 ////////////////////// SPI STUFF /////////////////////////////
 #define LPC_SSP   (LPC_SSP1)
-#define BUFFER_SIZE                         (10)
+#define BUFFER_SIZE                         (2000)
 #define SSP_DATA_BITS                       (SSP_BITS_16)
 #define SSP_DATA_BIT_NUM(databits)          (databits+1)
 #define SSP_DATA_BYTES(databits)            (((databits) > SSP_BITS_16) ? 2:1)
 #define SSP_LO_BYTE_MSK(databits)           ((SSP_DATA_BYTES(databits) > 1) ? 0xFF:(0xFF>>(8-SSP_DATA_BIT_NUM(databits))))
 #define SSP_HI_BYTE_MSK(databits)           ((SSP_DATA_BYTES(databits) > 1) ? (0xFF>>(16-SSP_DATA_BIT_NUM(databits))):0)
-
+#define SSP_IRQ           					(SSP1_IRQn)
+#define SSPIRQHANDLER SSP1_IRQHandler
 #define SSP_MODE_SEL                        (0x31)
 #define SSP_TRANSFER_MODE_SEL               (0x32)
 #define SSP_MASTER_MODE_SEL                 (0x31)
@@ -29,6 +30,21 @@ static SSP_ConfigFormat ssp_format;
 static Chip_SSP_DATA_SETUP_T xf_setup;
 static uint16_t Tx_Buf[BUFFER_SIZE];
 static uint16_t Rx_Buf[BUFFER_SIZE];
+static volatile uint8_t  isXferCompleted = 0;
+
+void SSPIRQHANDLER(void)
+{
+	Chip_SSP_Int_Disable(LPC_SSP);	/* Disable all interrupt */
+
+	Chip_SSP_Int_RWFrames16Bits(LPC_SSP, &xf_setup);
+
+	if ((xf_setup.rx_cnt != xf_setup.length) || (xf_setup.tx_cnt != xf_setup.length)) {
+		Chip_SSP_Int_Enable(LPC_SSP);	/* enable all interrupts */
+	}
+	else {
+		isXferCompleted = 1;
+	}
+}
 
 static void Buffer_Init(void)
 {
@@ -71,6 +87,7 @@ int main() {
 	Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
 	Chip_SSP_Enable(LPC_SSP);
 	Chip_SSP_SetMaster(LPC_SSP, 0); // Slave
+	NVIC_EnableIRQ(SSP_IRQ);
 
 	xf_setup.length = BUFFER_SIZE*2;
 	xf_setup.tx_data = Tx_Buf;
@@ -82,8 +99,18 @@ int main() {
 		Buffer_Init();
 		xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
 
+		// Interrupt mode
+/*
+		isXferCompleted = 0;
+	    Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
+		Chip_SSP_Int_RWFrames16Bits(LPC_SSP, &xf_setup);
+		Chip_SSP_Int_Enable(LPC_SSP);	// enable interrupt
+		while (!isXferCompleted) {}
+*/
+	    // Polled mode
+		Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
 		Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-		for (int i = 0; i < BUFFER_SIZE; i++)
+		for (int i = 0; i < 20; i++)
 		{
 			printf("%d\n", (uint16_t)Rx_Buf[i]);
 		}
