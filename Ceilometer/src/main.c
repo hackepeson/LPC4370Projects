@@ -89,14 +89,24 @@ int main() {
 	Chip_SSP_SetMaster(LPC_SSP, 0); // Slave
 	NVIC_EnableIRQ(SSP_IRQ);
 
-	xf_setup.length = BUFFER_SIZE*2;
+	xf_setup.length = DMA_TRANSFER_SIZE*2;
 	xf_setup.tx_data = Tx_Buf;
 	xf_setup.rx_data = Rx_Buf;
 
-
+	Buffer_Init();
+	uint16_t sampleVector[DMA_TRANSFER_SIZE];
 	while (1)
 	{
 		Buffer_Init();
+		memset(sampleVector, 0, sizeof(sampleVector));
+		performADCAndFetchOneVector(sampleVector);
+
+		for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
+		{
+			Tx_Buf[i] = sampleVector[i];
+		}
+
+		//Buffer_Init();
 		xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
 
 		// Interrupt mode
@@ -108,19 +118,31 @@ int main() {
 		while (!isXferCompleted) {}
 */
 	    // Polled mode
+
 		Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
 		Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+
+		for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
+		{
+			char txData[8];
+			sprintf(txData, "%d %d\n", i, Tx_Buf[i]);
+			Chip_UART_SendBlocking(LPC_UARTX, txData, strlen(txData));
+		}
+
+
+/*
 		for (int i = 0; i < 20; i++)
 		{
 			printf("%d\n", (uint16_t)Rx_Buf[i]);
 		}
+*/
 		//Chip_SSP_WriteFrames_Blocking(LPC_SSP, Tx_Buf, 2);
 		//uint32_t Chip_SSP_WriteFrames_Blocking(LPC_SSP_T *pSSP, const uint8_t *buffer, uint32_t buffer_len)
 	}
 
 	///////////// End SPI
 
-	uint16_t sampleVector[DMA_TRANSFER_SIZE];
+	//uint16_t sampleVector[DMA_TRANSFER_SIZE];
 	uint32_t sampleVectorSUM[DMA_TRANSFER_SIZE];
 	uint16_t MinNoOfSampleData = DMA_TRANSFER_SIZE + 1;
 

@@ -1,9 +1,9 @@
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:115:20:Chip_EEPROM_DisablePowerDown	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:157:20:Chip_EEPROM_SetReadWaitState	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:171:20:Chip_EEPROM_SetWaitState	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:183:20:Chip_EEPROM_SetCmd	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:240:24:Chip_EEPROM_GetIntStatus	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:262:20:Chip_EEPROM_ClearIntStatus	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:115:20:Chip_EEPROM_DisablePowerDown	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:157:20:Chip_EEPROM_SetReadWaitState	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:171:20:Chip_EEPROM_SetWaitState	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:183:20:Chip_EEPROM_SetCmd	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:240:24:Chip_EEPROM_GetIntStatus	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/eeprom_18xx_43xx.h:262:20:Chip_EEPROM_ClearIntStatus	16	static
 ../src/eeprom_18xx_43xx.c:47:13:setClkDiv	24	static
 ../src/eeprom_18xx_43xx.c:59:20:setWaitState	16	static
 ../src/eeprom_18xx_43xx.c:72:6:Chip_EEPROM_Init	16	static

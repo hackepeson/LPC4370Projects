@@ -128,7 +128,7 @@ OBJS += \
 src/%.o: ../src/%.c src/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc" -I"C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc\config_43xx" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -fmerge-constants -fmacro-prefix-map="$(<D)/"= -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc" -I"C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc\config_43xx" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -fmerge-constants -fmacro-prefix-map="$(<D)/"= -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

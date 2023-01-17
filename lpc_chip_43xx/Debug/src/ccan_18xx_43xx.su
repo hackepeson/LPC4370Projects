@@ -1,7 +1,7 @@
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/ccan_18xx_43xx.h:196:24:Chip_CCAN_GetStatus	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/ccan_18xx_43xx.h:207:20:Chip_CCAN_SetStatus	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/ccan_18xx_43xx.h:295:24:Chip_CCAN_GetTxRQST	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/ccan_18xx_43xx.h:436:24:Chip_CCAN_GetValidMsg	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/ccan_18xx_43xx.h:196:24:Chip_CCAN_GetStatus	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/ccan_18xx_43xx.h:207:20:Chip_CCAN_SetStatus	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/ccan_18xx_43xx.h:295:24:Chip_CCAN_GetTxRQST	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/ccan_18xx_43xx.h:436:24:Chip_CCAN_GetValidMsg	16	static
 ../src/ccan_18xx_43xx.c:47:13:configTimming	24	static
 ../src/ccan_18xx_43xx.c:72:16:getFreeMsgObject	24	static
 ../src/ccan_18xx_43xx.c:85:13:freeMsgObject	16	static

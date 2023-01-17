@@ -1,5 +1,5 @@
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/atimer_18xx_43xx.h:89:20:Chip_ATIMER_IntDisable	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/atimer_18xx_43xx.h:99:20:Chip_ATIMER_ClearIntStatus	16	static
-C:\Users\peh\Documents\MCUXpressoIDE_11.6.1_8255\workspace1\LPC4370Projects-master\lpc_chip_43xx\inc/atimer_18xx_43xx.h:120:20:Chip_ATIMER_UpdatePresetValue	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/atimer_18xx_43xx.h:89:20:Chip_ATIMER_IntDisable	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/atimer_18xx_43xx.h:99:20:Chip_ATIMER_ClearIntStatus	16	static
+C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/atimer_18xx_43xx.h:120:20:Chip_ATIMER_UpdatePresetValue	16	static
 ../src/atimer_18xx_43xx.c:51:6:Chip_ATIMER_Init	16	static
 ../src/atimer_18xx_43xx.c:58:6:Chip_ATIMER_DeInit	16	static
