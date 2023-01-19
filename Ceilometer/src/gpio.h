@@ -7,4 +7,7 @@ void gpioTogglePin();
 
 bool gpioReadP11();
 
+void setGPIO1_0_High();
+void setGPIO1_0_Low();
+
 #endif

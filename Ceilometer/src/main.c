@@ -31,6 +31,7 @@ static Chip_SSP_DATA_SETUP_T xf_setup;
 static uint16_t Tx_Buf[BUFFER_SIZE];
 static uint16_t Rx_Buf[BUFFER_SIZE];
 static volatile uint8_t  isXferCompleted = 0;
+static uint16_t tmpVec[1500];
 
 void SSPIRQHANDLER(void)
 {
@@ -44,6 +45,27 @@ void SSPIRQHANDLER(void)
 	else {
 		isXferCompleted = 1;
 	}
+}
+
+
+void performSPITransfer()
+{
+	xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+
+	// Interrupt mode
+	/*
+			isXferCompleted = 0;
+		    Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
+			Chip_SSP_Int_RWFrames16Bits(LPC_SSP, &xf_setup);
+			Chip_SSP_Int_Enable(LPC_SSP);	// enable interrupt
+			while (!isXferCompleted) {}
+	 */
+	// Polled mode
+
+	Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
+	Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+
+
 }
 
 static void Buffer_Init(void)
@@ -76,6 +98,13 @@ int main() {
 	initADC();
 	startADC();
 	gpioInit();
+	/*
+	while (1)
+	{
+		setGPIO1_0_High();
+		setGPIO1_0_Low();
+	}
+	 */
 
 	Board_SSP_Init(LPC_SSP);
 	Chip_SSP_Init(LPC_SSP);
@@ -95,47 +124,112 @@ int main() {
 
 	Buffer_Init();
 	uint16_t sampleVector[DMA_TRANSFER_SIZE];
+#define NO_OF_SAMPLE (8000)
+
+	timerSetup();
+	uint32_t sampleVectorSUM[DMA_TRANSFER_SIZE];
+	uint16_t MinNoOfSampleData = DMA_TRANSFER_SIZE + 1;
+
 	while (1)
 	{
-		Buffer_Init();
-		memset(sampleVector, 0, sizeof(sampleVector));
-		performADCAndFetchOneVector(sampleVector);
-
-		for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
+		for (;;)
 		{
-			Tx_Buf[i] = sampleVector[i];
+			/*
+ Buffer_Init();
+			memset(sampleVector, 0, sizeof(sampleVector));
+			performADCAndFetchOneVector(sampleVector);
+			 */
+			memset(sampleVectorSUM,0,sizeof(sampleVectorSUM));
+
+			 //for (int i = 0; i < NO_OF_SAMPLE; i++)
+		     for (int i = 0; i < NO_OF_SAMPLE; i++)
+			 {
+				 uint16_t noOfData;
+				 memset(sampleVector, 0, sizeof(sampleVector));
+
+				 timerWaitForInterrupt1ms();
+				 timerWaitMS(0);
+
+
+
+				 noOfData = performADCAndFetchOneVector(sampleVector);
+
+				 if (MinNoOfSampleData > noOfData)
+				 {
+					 MinNoOfSampleData = noOfData;
+				 }
+				 for (int n = 0; n < DMA_TRANSFER_SIZE; n++)
+				 {
+					 sampleVectorSUM[n] += sampleVector[n];
+				 }
+
+			 }
+
+
+			 for (int n = 0; n < DMA_TRANSFER_SIZE; n++)
+			 {
+				 tmpVec[n] = sampleVectorSUM[n]/NO_OF_SAMPLE;
+				 printf("%d\n\0", tmpVec[n]);
+
+			 }
+
+			 timerWaitMS(5000);
 		}
 
+
+			 /*
+
+
+
+			for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
+			{
+				Tx_Buf[i] = sampleVector[i];
+			}
+
+			for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
+			{
+				char txData[8];
+				sprintf(txData, "%d %d\n", i, Tx_Buf[i]);
+				Chip_UART_SendBlocking(LPC_UARTX, txData, strlen(txData));
+			}
+			  */
+
 		//Buffer_Init();
+
+		//performSPITransfer();
 		xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
 
 		// Interrupt mode
-/*
+		/*
 		isXferCompleted = 0;
 	    Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
 		Chip_SSP_Int_RWFrames16Bits(LPC_SSP, &xf_setup);
 		Chip_SSP_Int_Enable(LPC_SSP);	// enable interrupt
 		while (!isXferCompleted) {}
-*/
-	    // Polled mode
+		 */
+		// Polled mode
 
+		/*
 		Chip_SSP_Int_FlushData(LPC_SSP); // flush dummy data from SSP FiFO
 		Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+		 */
 
+		/*
 		for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
 		{
 			char txData[8];
 			sprintf(txData, "%d %d\n", i, Tx_Buf[i]);
 			Chip_UART_SendBlocking(LPC_UARTX, txData, strlen(txData));
 		}
+		 */
 
 
-/*
+		/*
 		for (int i = 0; i < 20; i++)
 		{
 			printf("%d\n", (uint16_t)Rx_Buf[i]);
 		}
-*/
+		 */
 		//Chip_SSP_WriteFrames_Blocking(LPC_SSP, Tx_Buf, 2);
 		//uint32_t Chip_SSP_WriteFrames_Blocking(LPC_SSP_T *pSSP, const uint8_t *buffer, uint32_t buffer_len)
 	}
@@ -143,8 +237,8 @@ int main() {
 	///////////// End SPI
 
 	//uint16_t sampleVector[DMA_TRANSFER_SIZE];
-	uint32_t sampleVectorSUM[DMA_TRANSFER_SIZE];
-	uint16_t MinNoOfSampleData = DMA_TRANSFER_SIZE + 1;
+	//uint32_t sampleVectorSUM[DMA_TRANSFER_SIZE];
+	//uint16_t MinNoOfSampleData = DMA_TRANSFER_SIZE + 1;
 
 #define NO_OF_SAMPLE (8000)
 
@@ -161,7 +255,8 @@ int main() {
 	while (1) {
 		memset(sampleVectorSUM, 0, sizeof(sampleVectorSUM));
 		MinNoOfSampleData = DMA_TRANSFER_SIZE + 1;
-		for (int i = 0; i < NO_OF_SAMPLE; i++) {
+		for (int i = 0; i < NO_OF_SAMPLE; i++)
+		{
 			uint16_t noOfData;
 			//timerWaitForInterrupt1ms();
 
@@ -174,7 +269,7 @@ int main() {
 				while (0) {
 					__NOP();
 				}
-			*/
+			 */
 			/*
 			 for (int i = 0; i < noOfData; i++)
 			 {
@@ -220,7 +315,7 @@ int main() {
 			printf("%lu\n", sampleVectorSUM[i]);
 		}
 		printf("Min no of sample point = %d\n", MinNoOfSampleData);
-		*/
+		 */
 
 	}
 	return 0;

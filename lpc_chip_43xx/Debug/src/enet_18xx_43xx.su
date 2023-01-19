@@ -1,6 +1,6 @@
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/rgu_18xx_43xx.h:119:20:Chip_RGU_TriggerReset	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/rgu_18xx_43xx.h:130:20:Chip_RGU_InReset	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/enet_18xx_43xx.h:458:20:Chip_ENET_Reset	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/rgu_18xx_43xx.h:119:20:Chip_RGU_TriggerReset	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/rgu_18xx_43xx.h:130:20:Chip_RGU_InReset	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/enet_18xx_43xx.h:458:20:Chip_ENET_Reset	16	static
 ../src/enet_18xx_43xx.c:49:20:reset	16	static
 ../src/enet_18xx_43xx.c:59:17:Chip_ENET_CalcMDCClock	16	static
 ../src/enet_18xx_43xx.c:87:6:Chip_ENET_Init	16	static

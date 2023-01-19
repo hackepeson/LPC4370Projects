@@ -119,7 +119,9 @@ uint16_t performADCAndFetchOneVector(uint16_t* vector)
                                     | (0x0                << 16)  // lock: when set, this bit enables locked transfer
 //                                    | (0x1                << 18); // Halt: 1, enable DMA requests; 0, ignore further src DMA req
 ;
-gpioTogglePin();
+//gpioTogglePin();
+setGPIO1_0_High();
+
 
 
 
@@ -132,6 +134,7 @@ gpioTogglePin();
         noOfADCData++;
       }
    }
+   setGPIO1_0_Low();
    return noOfADCData;
 }
 

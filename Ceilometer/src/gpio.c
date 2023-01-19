@@ -19,6 +19,22 @@ void PININT_IRQ_HANDLER(void)
 }
 
 
+void setGPIO1_0_High()
+{
+
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, true);
+}
+
+void setGPIO1_0_Low()
+{
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
+	 Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
+}
+
+
 void gpioInit()
 {
   // P1_0 Output
@@ -47,9 +63,9 @@ void gpioInit()
 
 void gpioTogglePin()
 {
-  //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
-  //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, true);
-  //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
+  Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
+  Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, true);
+  Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, false);
 
 }
 

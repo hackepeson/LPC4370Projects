@@ -1,8 +1,8 @@
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:279:20:Chip_SDIF_SetBlkSize	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:354:20:Chip_SDIF_SetCardType	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:375:20:Chip_SDIF_ClrIntStatus	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:397:20:Chip_SDIF_SetBlkSizeByteCnt	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:409:20:Chip_SDIF_SetByteCnt	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:279:20:Chip_SDIF_SetBlkSize	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:354:20:Chip_SDIF_SetCardType	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:375:20:Chip_SDIF_ClrIntStatus	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:397:20:Chip_SDIF_SetBlkSizeByteCnt	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/sdif_18xx_43xx.h:409:20:Chip_SDIF_SetByteCnt	16	static
 ../src/sdmmc_18xx_43xx.c:56:16:sdmmc_execute_command	40	static
 ../src/sdmmc_18xx_43xx.c:149:16:prv_card_acquired	4	static
 ../src/sdmmc_18xx_43xx.c:156:17:prv_get_bits	40	static

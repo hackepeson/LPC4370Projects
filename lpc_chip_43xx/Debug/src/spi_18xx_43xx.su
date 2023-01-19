@@ -1,10 +1,10 @@
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:189:24:Chip_SPI_GetStatus	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:200:20:Chip_SPI_SendFrame	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:210:24:Chip_SPI_ReceiveFrame	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:223:20:Chip_SPI_SetClockCounter	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:244:26:Chip_SPI_GetDataSize	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:275:20:Chip_SPI_SetMode	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:324:20:Chip_SPI_Int_ClearStatus	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:189:24:Chip_SPI_GetStatus	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:200:20:Chip_SPI_SendFrame	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:210:24:Chip_SPI_ReceiveFrame	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:223:20:Chip_SPI_SetClockCounter	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:244:26:Chip_SPI_GetDataSize	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:275:20:Chip_SPI_SetMode	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/spi_18xx_43xx.h:324:20:Chip_SPI_Int_ClearStatus	16	static
 ../src/spi_18xx_43xx.c:49:13:executeCallback	16	static
 ../src/spi_18xx_43xx.c:57:13:writeData	32	static
 ../src/spi_18xx_43xx.c:73:13:readData	24	static

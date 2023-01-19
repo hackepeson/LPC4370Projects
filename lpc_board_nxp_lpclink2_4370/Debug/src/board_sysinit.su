@@ -1,5 +1,5 @@
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/scu_18xx_43xx.h:135:20:Chip_SCU_PinMuxSet	16	static
-C:\workarea\GITHUB_REPOS\LPC4370Projects\lpc_chip_43xx\inc/scu_18xx_43xx.h:231:20:Chip_SCU_SetPinMuxing	24	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/scu_18xx_43xx.h:135:20:Chip_SCU_PinMuxSet	16	static
+C:\workspace_Ceilometer2023\LPC4370\LPC4370Projects\lpc_chip_43xx\inc/scu_18xx_43xx.h:231:20:Chip_SCU_SetPinMuxing	24	static
 ../src/board_sysinit.c:89:6:Board_SetupMuxing	8	static
 ../src/board_sysinit.c:101:6:Board_SetupClocking	24	static
 ../src/board_sysinit.c:138:6:Board_SystemInit	8	static
