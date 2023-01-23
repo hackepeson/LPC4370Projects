@@ -110,6 +110,7 @@ uint16_t performADCAndFetchOneVector(uint16_t* vector)
 
    Chip_HSADC_FlushFIFO(LPC_ADCHS);
 
+
    LPC_GPDMA->CH[DMA_CH].CONFIG   =      (0x1                << 0)   // enable bit: 1 enable, 0 disable
                                     | (HSADC_DMA_READ     << 1)   // src peripheral: set to 8   - HSADC
                                     | (0x0                << 6)   // dst peripheral: no setting - memory
@@ -126,6 +127,7 @@ setGPIO1_0_High();
 
 
    while ((LPC_GPDMA->RAWINTTCSTAT & 0x80) != 0x80);
+   setGPIO1_0_Low();
    for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
    {
       if (sample[i] != 0x8000)

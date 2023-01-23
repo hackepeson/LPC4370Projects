@@ -31,7 +31,7 @@ static Chip_SSP_DATA_SETUP_T xf_setup;
 static uint16_t Tx_Buf[BUFFER_SIZE];
 static uint16_t Rx_Buf[BUFFER_SIZE];
 static volatile uint8_t  isXferCompleted = 0;
-static uint16_t tmpVec[1500];
+static uint16_t tmpVec[DMA_TRANSFER_SIZE];
 
 void SSPIRQHANDLER(void)
 {
@@ -148,12 +148,16 @@ int main() {
 				 memset(sampleVector, 0, sizeof(sampleVector));
 
 				 timerWaitForInterrupt1ms();
-				 timerWaitMS(0);
-
 
 
 				 noOfData = performADCAndFetchOneVector(sampleVector);
+/*
+				 for (int n = 0; n < noOfData; n++)
+				 {
+					 printf("%d\n\0", sampleVector[n]);
+				 }
 
+*/
 				 if (MinNoOfSampleData > noOfData)
 				 {
 					 MinNoOfSampleData = noOfData;
@@ -165,13 +169,15 @@ int main() {
 
 			 }
 
-
-			 for (int n = 0; n < DMA_TRANSFER_SIZE; n++)
+/*
+			 for (int n = 0; n < MinNoOfSampleData; n++)
 			 {
 				 tmpVec[n] = sampleVectorSUM[n]/NO_OF_SAMPLE;
 				 printf("%d\n\0", tmpVec[n]);
 
 			 }
+			 printf("Number of data = %d\n\0", MinNoOfSampleData);
+*/
 
 			 timerWaitMS(5000);
 		}

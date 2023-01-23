@@ -4,7 +4,7 @@
 
 #define SAMPLERATE (1000)
 
-static bool timerInterruptOccured  = false;
+volatile static bool timerInterruptOccured  = false;
 
 void timerSetup(void)
 {
@@ -46,5 +46,8 @@ void timerWaitForInterrupt1ms()
 
 void timerWaitMS(uint16_t timeValueMs)
 {
-   for (int i = 0; i < timeValueMs; i++);
+   for (int i = 0; i < timeValueMs; i++)
+   {
+	   timerWaitForInterrupt1ms();
+   }
 }

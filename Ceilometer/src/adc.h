@@ -2,7 +2,7 @@
 #define __ADC_H__
 #include <stdint.h>
 
-#define DMA_TRANSFER_SIZE 1500 // max. 4095
+#define DMA_TRANSFER_SIZE 4095 // max. 4095
 
 void initADC();
 void startADC();
